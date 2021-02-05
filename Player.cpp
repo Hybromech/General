@@ -1,7 +1,8 @@
-#include "player.h"
+#include "Player.h"
 
 Player::Player()//constructor
 {
+	name[0] = 0;
 	player_id = 0;
 	highscore = 0;
 	is_modified = false;
@@ -40,7 +41,7 @@ int Player::Return_numeric(std::string type)
 		return highscore;
 	}
 }
-void Player::Set_numeric(std::string type, float val)
+void Player::Set_numeric(std::string type, int val)
 {
 	if (type == "id")
 	{
